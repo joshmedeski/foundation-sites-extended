@@ -1,0 +1,11 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Foundation Extended
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import 'helpers/color';
+@import 'helpers/float';
+
+@mixin foundation-extended-everything {
+  @include foundation-extended-color;
+  @include foundation-extended-float;
+}

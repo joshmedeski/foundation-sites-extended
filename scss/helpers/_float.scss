@@ -1,0 +1,22 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Float
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// scss-lint:disable ImportantRule
+
+@mixin foundation-extended-float {
+  @each $size in $breakpoint-classes {
+    @include breakpoint($size) {
+      @each $float in (left, right, none) {
+        @if $size != $-zf-zero-breakpoint {
+          .#{$size}-float-#{$float} {
+            float: $float !important;
+          }
+        } @else {
+          .float-#{$float} {
+            float: $float !important;
+          }
+        }
+      }
+    }
+  }
+}

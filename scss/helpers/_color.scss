@@ -1,0 +1,12 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Color
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// scss-lint:disable ImportantRule
+
+@mixin foundation-extended-color {
+  @each $name, $color in $foundation-palette {
+    .#{$name}-color {
+      color: $color !important;
+    }
+  }
+}

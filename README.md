@@ -1,2 +1,2 @@
-# foundation-helpers-extended
-An extended library of helper classes for Foundation for Sites framework
+# Foundation for Sites Extended
+An extended library of helper classes and opinionated component extensions for the Foundation for Sites framework.
