@@ -1,0 +1,22 @@
+{
+  "name": "foundation-sites-extended",
+  "description": "An extended library of helper classes and opinionated component extensions for the Foundation for Sites framework",
+  "main": "gulpfile.js",
+  "authors": [
+    "Josh Medeski"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "foundation"
+  ],
+  "homepage": "https://github.com/joshmedeski/foundation-sites-extended",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.2.4"
+  }
+}
