@@ -4,18 +4,28 @@
 
 @mixin foundation-extended-float {
   @each $size in $breakpoint-classes {
+
     @include breakpoint($size) {
       @each $float in (left, right, none) {
-        @if $size != $-zf-zero-breakpoint {
-          .#{$size}-float-#{$float} {
-            float: $float !important;
-          }
-        } @else {
-          .float-#{$float} {
-            float: $float !important;
-          }
+        .#{$size}-float-#{$float} {
+          float: $float !important;
         }
       }
     }
+
+    @include breakpoint($size only) {
+      @each $float in (left, right, none) {
+        .#{$size}-float-#{$float}-only {
+          float: $float !important;
+        }
+      }
+    }
+
+    @each $float in (left, right, none) {
+      .float-#{$float} {
+        float: $float !important;
+      }
+    }
+
   }
 }
