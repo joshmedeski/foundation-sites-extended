@@ -1,12 +1,20 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Helpers - Color
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// scss-lint:disable ImportantRule
+
+@mixin foundation-extended-color-style($colorName, $colorValue) {
+  .#{$colorName}-color {
+    color: $colorValue !important;
+  }
+}
 
 @mixin foundation-extended-color {
   @each $name, $color in $foundation-palette {
-    .#{$name}-color {
-      color: $color !important;
-    }
+    @include foundation-extended-color-style($name, $color)
   }
+  @include foundation-extended-color-style('light-gray', $light-gray);
+  @include foundation-extended-color-style('medium-gray', $medium-gray);
+  @include foundation-extended-color-style('dark-gray', $dark-gray);
+  @include foundation-extended-color-style('black', $black);
+  @include foundation-extended-color-style('white', $white);
 }
