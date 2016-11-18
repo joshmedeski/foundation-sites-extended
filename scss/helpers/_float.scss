@@ -1,7 +1,6 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Helpers - Float
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// scss-lint:disable ImportantRule
 
 @mixin foundation-extended-float {
   @each $size in $breakpoint-classes {
