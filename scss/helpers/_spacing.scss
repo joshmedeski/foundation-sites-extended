@@ -1,0 +1,47 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Spacing (Margin and Padding)
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$spacing-sizes: (
+  none: 0,
+  half: .5,
+  one: 1,
+  three: 3,
+  five: 5
+) !default;
+
+@mixin foundation-extended-spacing {
+  @each $size in $breakpoint-classes {
+    @each $spacing in (padding, margin) {
+
+      @include breakpoint($size) {
+        @each $spacing-name, $spacing-amount in $spacing-sizes {
+          @each $position in (top, right, bottom, left) {
+            .#{$size}-#{$spacing}-#{$position}-#{$spacing-name} {
+              #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
+            }
+          }
+        }
+      }
+
+      @include breakpoint($size only) {
+        @each $spacing-name, $spacing-amount in $spacing-sizes {
+          @each $position in (top, right, bottom, left) {
+            .#{$size}-#{$spacing}-#{$position}-#{$spacing-name}-only {
+              #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
+            }
+          }
+        }
+      }
+
+      @each $spacing-name, $spacing-amount in $spacing-sizes {
+        @each $position in (top, right, bottom, left) {
+          .#{$spacing}-#{$position}-#{$spacing-name} {
+            #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
+          }
+        }
+      }
+
+    }
+  }
+}

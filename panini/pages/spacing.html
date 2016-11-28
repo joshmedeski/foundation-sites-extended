@@ -1,0 +1,659 @@
+---
+title: Spacing
+description: Spacing utility classes (margin and padding)
+---
+
+<style>
+  h3 {
+    line-height: 1;
+    margin: 0;
+  }
+
+  .box-parent {
+    background-color: magenta;
+    overflow: auto;
+  }
+
+  .box {
+    border: 3px solid black;
+    background-image:
+      linear-gradient(to bottom, yellow 0%, yellow 100%),
+      linear-gradient(to bottom, aqua 0%, aqua 100%);
+    background-clip: content-box, padding-box;
+  }
+</style>
+
+<h2>padding top</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box padding-top-{{this}}">
+    <h3>.padding-top-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>padding right</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box padding-right-{{this}}">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>padding bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box padding-bottom-{{this}}">
+    <h3>.padding-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>padding right</h2>
+{{#each spacing}}
+<div class="box padding-right-{{this}}">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>margin top</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box margin-top-{{this}}">
+    <h3>.margin-top-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box margin-right-{{this}}">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>margin bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box margin-bottom-{{this}}">
+    <h3>.margin-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box margin-right-{{this}}">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>margin left</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box margin-left-{{this}}">
+    <h3>.margin-left-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>small padding top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-padding-top-{{this}}">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small padding right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small padding bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-padding-bottom-{{this}}">
+  <h3>.padding-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>small padding right</h2>
+{{#each spacing}}
+<div class="box small-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-margin-top-{{this}}">
+  <h3>.margin-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-margin-bottom-{{this}}">
+  <h3>.margin-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin left</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-margin-left-{{this}}">
+  <h3>.margin-left-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>small padding top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box small-padding-top-{{this}}-only">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small padding right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>small padding bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-padding-bottom-{{this}}-only">
+    <h3>.padding-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>small padding right-only</h2>
+{{#each spacing}}
+<div class="box small-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-margin-top-{{this}}-only">
+    <h3>.margin-top-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-margin-bottom-{{this}}-only">
+    <h3>.margin-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>small margin left only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box small-margin-left-{{this}}-only">
+    <h3>.margin-left-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>large padding top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-padding-top-{{this}}">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium padding right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium padding bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-padding-bottom-{{this}}">
+  <h3>.padding-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>medium padding right</h2>
+{{#each spacing}}
+<div class="box medium-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-margin-top-{{this}}">
+  <h3>.margin-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-margin-bottom-{{this}}">
+  <h3>.margin-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin left</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-margin-left-{{this}}">
+  <h3>.margin-left-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>medium padding top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box medium-padding-top-{{this}}-only">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium padding right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium padding bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-padding-bottom-{{this}}-only">
+    <h3>.padding-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>medium padding right-only</h2>
+{{#each spacing}}
+<div class="box medium-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-margin-top-{{this}}-only">
+    <h3>.margin-top-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-margin-bottom-{{this}}-only">
+    <h3>.margin-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>medium margin left only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box medium-margin-left-{{this}}-only">
+    <h3>.margin-left-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>large padding top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-padding-top-{{this}}">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large padding right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large padding bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-padding-bottom-{{this}}">
+  <h3>.padding-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>large padding right</h2>
+{{#each spacing}}
+<div class="box large-padding-right-{{this}}">
+<h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin top</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-margin-top-{{this}}">
+  <h3>.margin-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin bottom</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-margin-bottom-{{this}}">
+  <h3>.margin-bottom-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin right</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-margin-right-{{this}}">
+  <h3>.margin-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin left</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-margin-left-{{this}}">
+  <h3>.margin-left-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<hr>
+
+<h2>large padding top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+<div class="box large-padding-top-{{this}}-only">
+  <h3>.padding-top-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large padding right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+</div>
+<br>
+{{/each}}
+
+<h2>large padding bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-padding-bottom-{{this}}-only">
+    <h3>.padding-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+
+<h2>large padding right-only</h2>
+{{#each spacing}}
+<div class="box large-padding-right-{{this}}-only">
+  <h3>.padding-right-{{this}}</h3>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin top only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-margin-top-{{this}}-only">
+    <h3>.margin-top-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin bottom only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-margin-bottom-{{this}}-only">
+    <h3>.margin-bottom-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin right only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-margin-right-{{this}}-only">
+    <h3>.margin-right-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
+
+<h2>large margin left only</h2>
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box large-margin-left-{{this}}-only">
+    <h3>.margin-left-{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}

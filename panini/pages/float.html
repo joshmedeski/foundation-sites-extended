@@ -1,0 +1,42 @@
+---
+title: Float
+---
+
+<h2>default</h2>
+<div class="callout text-center">
+  <div class="clearfix">
+    <h3 class="float-left">.float-left</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="float-right">.float-right</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="float-none">.float-none</h3>
+  </div>
+</div>
+
+{{#each breakpoints}}
+<h2>{{ this }}</h2>
+<div class="callout text-center">
+  <div class="clearfix">
+    <h3 class="{{this}}-float-left">.{{this}}-float-left</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="{{this}}-float-right">.{{this}}-float-right</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="{{this}}-float-none">.{{this}}-float-none</h3>
+  </div>
+</div>
+<div class="callout text-center">
+  <div class="clearfix">
+    <h3 class="{{this}}-float-left-only">.{{this}}-float-left-only</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="{{this}}-float-right-only">.{{this}}-float-right-only</h3>
+  </div>
+  <div class="clearfix">
+    <h3 class="{{this}}-float-none-only">.{{this}}-float-none-only</h3>
+  </div>
+</div>
+{{/each}}

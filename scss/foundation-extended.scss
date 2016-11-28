@@ -8,9 +8,11 @@
 // Helpers
 @import 'helpers/color';
 @import 'helpers/float';
+@import 'helpers/spacing';
 
 // Everything
 @mixin foundation-extended-everything {
   @include foundation-extended-color;
   @include foundation-extended-float;
+  @include foundation-extended-spacing;
 }
