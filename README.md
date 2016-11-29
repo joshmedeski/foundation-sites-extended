@@ -9,7 +9,6 @@ To customize the settings, you can add the following variables to your `_setting
 // 37. Foundation Extended
 // -----------
 
-
 $spacing-breakpoint-classes: true;
 $spacing-sizes: (
   none: 0,
@@ -17,5 +16,10 @@ $spacing-sizes: (
   one: 1,
   three: 3,
   five: 5
+);
+$line-height-sizes: (
+  one: 1,
+  one-half: 1.5,
+  two: 2
 );
 ```
