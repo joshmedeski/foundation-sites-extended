@@ -2,9 +2,9 @@
 // Helpers - Color
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@mixin foundation-extended-color-style($colorName, $colorValue) {
-  .#{$colorName}-color {
-    color: $colorValue !important;
+@mixin foundation-extended-color-style($color-name, $color-value) {
+  .#{$color-name}-color {
+    color: $color-value !important;
   }
 }
 
