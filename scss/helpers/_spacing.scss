@@ -3,6 +3,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // scss-lint:disable ImportantRule
 
+$spacing-breakpoint-classes: true !default;
+
 $spacing-sizes: (
   none: 0,
   half: .5,
@@ -24,14 +26,14 @@ $spacing-sizes: (
                   #{$spacing}: (1rem * $spacing-amount) !important;
                 }
               }
-              @if $breakpoint in ('regular breakpoint') {
+              @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
                 @include breakpoint($size) {
                   .#{$size}-#{$spacing}-#{$spacing-name} {
                     #{$spacing}: (1rem * $spacing-amount) !important;
                   }
                 }
               }
-              @if $breakpoint in ('only breakpoint') {
+              @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
                 @include breakpoint($size only) {
                   .#{$size}-#{$spacing}-#{$spacing-name}-only {
                     #{$spacing}: (1rem * $spacing-amount) !important;
@@ -47,14 +49,14 @@ $spacing-sizes: (
                     #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
                   }
                 }
-                @if $breakpoint in ('regular breakpoint') {
+                @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
                   @include breakpoint($size) {
                     .#{$size}-#{$spacing}-#{$position}-#{$spacing-name} {
                       #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
                     }
                   }
                 }
-                @if $breakpoint in ('only breakpoint') {
+                @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
                   @include breakpoint($size only) {
                     .#{$size}-#{$spacing}-#{$position}-#{$spacing-name}-only {
                       #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
