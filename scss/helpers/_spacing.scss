@@ -1,6 +1,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Helpers - Spacing (Margin and Padding)
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// scss-lint:disable ImportantRule
 
 $spacing-sizes: (
   none: 0,
@@ -11,37 +12,61 @@ $spacing-sizes: (
 ) !default;
 
 @mixin foundation-extended-spacing {
-  @each $size in $breakpoint-classes {
-    @each $spacing in (padding, margin) {
+  @each $area in ('all around', 'specific side') {
+    @each $breakpoint in ('no breakpoint', 'regular breakpoint', 'only breakpoint') {
+      @each $size in $breakpoint-classes {
+        @each $spacing in (padding, margin) {
+          @each $spacing-name, $spacing-amount in $spacing-sizes {
 
-      @include breakpoint($size) {
-        @each $spacing-name, $spacing-amount in $spacing-sizes {
-          @each $position in (top, right, bottom, left) {
-            .#{$size}-#{$spacing}-#{$position}-#{$spacing-name} {
-              #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
+            @if $area == 'all around' {
+              @if $breakpoint in ('no breakpoint') {
+                .#{$spacing}-#{$spacing-name} {
+                  #{$spacing}: (1rem * $spacing-amount) !important;
+                }
+              }
+              @if $breakpoint in ('regular breakpoint') {
+                @include breakpoint($size) {
+                  .#{$size}-#{$spacing}-#{$spacing-name} {
+                    #{$spacing}: (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
+              @if $breakpoint in ('only breakpoint') {
+                @include breakpoint($size only) {
+                  .#{$size}-#{$spacing}-#{$spacing-name}-only {
+                    #{$spacing}: (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
             }
-          }
-        }
-      }
 
-      @include breakpoint($size only) {
-        @each $spacing-name, $spacing-amount in $spacing-sizes {
-          @each $position in (top, right, bottom, left) {
-            .#{$size}-#{$spacing}-#{$position}-#{$spacing-name}-only {
-              #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
+            @if $area == 'specific side' {
+              @each $position in (top, right, bottom, left) {
+                @if $breakpoint in ('no breakpoint') {
+                  .#{$spacing}-#{$position}-#{$spacing-name} {
+                    #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                  }
+                }
+                @if $breakpoint in ('regular breakpoint') {
+                  @include breakpoint($size) {
+                    .#{$size}-#{$spacing}-#{$position}-#{$spacing-name} {
+                      #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                    }
+                  }
+                }
+                @if $breakpoint in ('only breakpoint') {
+                  @include breakpoint($size only) {
+                    .#{$size}-#{$spacing}-#{$position}-#{$spacing-name}-only {
+                      #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                    }
+                  }
+                }
+              }
             }
+
           }
         }
       }
-
-      @each $spacing-name, $spacing-amount in $spacing-sizes {
-        @each $position in (top, right, bottom, left) {
-          .#{$spacing}-#{$position}-#{$spacing-name} {
-            #{$spacing}-#{$position}: (1rem*$spacing-amount) !important;
-          }
-        }
-      }
-
     }
   }
 }
