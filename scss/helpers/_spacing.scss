@@ -1,0 +1,117 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Spacing (Margin and Padding)
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$spacing-breakpoint-classes: true !default;
+
+$spacing-sizes: (
+  none: 0,
+  half: .5,
+  one: 1,
+  three: 3,
+  five: 5
+) !default;
+
+@mixin foundation-extended-spacing {
+  @each $area in ('all around', 'vertical', 'horizontal', 'specific side') {
+    @each $breakpoint in ('no breakpoint', 'regular breakpoint', 'only breakpoint') {
+      @each $size in $breakpoint-classes {
+        @each $spacing in (padding, margin) {
+          @each $spacing-name, $spacing-amount in $spacing-sizes {
+
+            @if $area == 'all around' {
+              @if $breakpoint in ('no breakpoint') {
+                .#{$spacing}-#{$spacing-name} {
+                  #{$spacing}: (1rem * $spacing-amount) !important;
+                }
+              }
+              @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size) {
+                  .#{$size}-#{$spacing}-#{$spacing-name} {
+                    #{$spacing}: (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
+              @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size only) {
+                  .#{$size}-#{$spacing}-#{$spacing-name}-only {
+                    #{$spacing}: (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
+            }
+
+            @if $area == 'vertical' {
+              @if $breakpoint in ('no breakpoint') {
+                .#{$spacing}-vertical-#{$spacing-name} {
+                  #{$spacing}: (1rem * $spacing-amount) 0 !important;
+                }
+              }
+              @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size) {
+                  .#{$size}-#{$spacing}-vertical-#{$spacing-name} {
+                    #{$spacing}: (1rem * $spacing-amount) 0 !important;
+                  }
+                }
+              }
+              @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size only) {
+                  .#{$size}-#{$spacing}-vertical-#{$spacing-name}-only {
+                    #{$spacing}: (1rem * $spacing-amount) 0 !important;
+                  }
+                }
+              }
+            }
+
+            @if $area == 'horizontal' {
+              @if $breakpoint in ('no breakpoint') {
+                .#{$spacing}-horizontal-#{$spacing-name} {
+                  #{$spacing}: 0 (1rem * $spacing-amount) !important;
+                }
+              }
+              @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size) {
+                  .#{$size}-#{$spacing}-horizontal-#{$spacing-name} {
+                    #{$spacing}: 0 (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
+              @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
+                @include breakpoint($size only) {
+                  .#{$size}-#{$spacing}-horizontal-#{$spacing-name}-only {
+                    #{$spacing}: 0 (1rem * $spacing-amount) !important;
+                  }
+                }
+              }
+            }
+
+            @if $area == 'specific side' {
+              @each $position in (top, right, bottom, left) {
+                @if $breakpoint in ('no breakpoint') {
+                  .#{$spacing}-#{$position}-#{$spacing-name} {
+                    #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                  }
+                }
+                @if $breakpoint in ('regular breakpoint') and $spacing-breakpoint-classes {
+                  @include breakpoint($size) {
+                    .#{$size}-#{$spacing}-#{$position}-#{$spacing-name} {
+                      #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                    }
+                  }
+                }
+                @if $breakpoint in ('only breakpoint') and $spacing-breakpoint-classes {
+                  @include breakpoint($size only) {
+                    .#{$size}-#{$spacing}-#{$position}-#{$spacing-name}-only {
+                      #{$spacing}-#{$position}: (1rem * $spacing-amount) !important;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

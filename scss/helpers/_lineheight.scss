@@ -1,0 +1,36 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Float
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$line-height-breakpoint-classes: true !default;
+
+$line-height-sizes: (
+  one: 1,
+  one-half: 1.5,
+  two: 2
+) !default;
+
+@mixin foundation-extended-line-height {
+  @each $size in $breakpoint-classes {
+    @each $line-height-name, $line-height-amount in $line-height-sizes {
+
+      .line-height-#{$line-height-name} {
+        line-height: (1 * $line-height-amount) !important;
+      }
+
+      @include breakpoint($size) {
+        .#{$size}-line-height-#{$line-height-name} {
+          line-height: (1 * $line-height-amount) !important;
+        }
+      }
+
+      @include breakpoint($size only) {
+        .#{$size}-line-height-#{$line-height-name}-only {
+          line-height: (1 * $line-height-amount) !important;
+        }
+      }
+
+
+    }
+  }
+}

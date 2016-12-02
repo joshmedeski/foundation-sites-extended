@@ -1,0 +1,20 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Color
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin foundation-extended-color-style($color-name, $color-value) {
+  .#{$color-name}-color {
+    color: $color-value !important;
+  }
+}
+
+@mixin foundation-extended-color {
+  @each $name, $color in $foundation-palette {
+    @include foundation-extended-color-style($name, $color)
+  }
+  @include foundation-extended-color-style('light-gray', $light-gray);
+  @include foundation-extended-color-style('medium-gray', $medium-gray);
+  @include foundation-extended-color-style('dark-gray', $dark-gray);
+  @include foundation-extended-color-style('black', $black);
+  @include foundation-extended-color-style('white', $white);
+}

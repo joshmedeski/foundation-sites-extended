@@ -1,0 +1,20 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Foundation Extended
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Dependency
+@import 'foundation';
+
+// Helpers
+@import 'helpers/color';
+@import 'helpers/float';
+@import 'helpers/lineheight';
+@import 'helpers/spacing';
+
+// Everything
+@mixin foundation-extended-everything {
+  @include foundation-extended-color;
+  @include foundation-extended-float;
+  @include foundation-extended-line-height;
+  @include foundation-extended-spacing;
+}

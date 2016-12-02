@@ -1,0 +1,5 @@
+scss_files: 'scss/**/*.scss'
+
+linters:
+  ImportantRule:
+    enabled: false

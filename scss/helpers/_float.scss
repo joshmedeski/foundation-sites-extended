@@ -1,0 +1,27 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Helpers - Float
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin foundation-extended-float {
+  @each $size in $breakpoint-classes {
+    @each $float in (left, right, none) {
+
+      .float-#{$float} {
+        float: $float !important;
+      }
+
+      @include breakpoint($size) {
+        .#{$size}-float-#{$float} {
+          float: $float !important;
+        }
+      }
+
+      @include breakpoint($size only) {
+        .#{$size}-float-#{$float}-only {
+          float: $float !important;
+        }
+      }
+
+    }
+  }
+}

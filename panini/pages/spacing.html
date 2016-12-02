@@ -1,0 +1,33 @@
+---
+title: Spacing
+description: Spacing utility classes (margin and padding)
+---
+
+<style>
+  h3 {
+    line-height: 1;
+    margin: 0;
+  }
+
+  .box-parent {
+    background-color: magenta;
+    overflow: auto;
+  }
+
+  .box {
+    border: 3px solid black;
+    background-image:
+      linear-gradient(to bottom, yellow 0%, yellow 100%),
+      linear-gradient(to bottom, aqua 0%, aqua 100%);
+    background-clip: content-box, padding-box;
+  }
+</style>
+
+{{#each spacing}}
+<div class="box-parent">
+  <div class="box {{this}}">
+    <h3>.{{this}}</h3>
+  </div>
+</div>
+<br>
+{{/each}}
